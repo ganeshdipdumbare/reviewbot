@@ -1,4 +1,4 @@
-# Reviewbot
+# ReviewBot
 
 [![Go](https://github.com/ganeshdipdumbare/reviewbot/actions/workflows/go.yml/badge.svg)](https://github.com/ganeshdipdumbare/reviewbot/actions/workflows/go.yml)
 
