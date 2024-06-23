@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  database:
+    image: mongo:7.0.3
+    ports:
+      - '27017:27017'
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/test --quiet
+  reviewapp:
+    build: .
+    ports:
+      - '5174:5174'
+    environment:
+      - MONGO_URI=mongodb://database:27017
+      - PORT=5174
+    restart: on-failure
+    depends_on:
+      database:
+        condition: service_healthy
+    links:
+      - 'database'

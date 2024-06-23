@@ -1,0 +1,115 @@
+basePath: /api/v1
+definitions:
+  rest.converseRequest:
+    properties:
+      conversationID:
+        type: string
+      productID:
+        type: string
+      reviewID:
+        type: string
+      text:
+        type: string
+      userID:
+        type: string
+    required:
+    - text
+    type: object
+  rest.converseResponse:
+    properties:
+      conversationID:
+        type: string
+      productID:
+        type: string
+      reviewID:
+        type: string
+      text:
+        type: string
+      userID:
+        type: string
+    type: object
+  rest.endConverseRequest:
+    properties:
+      conversationID:
+        type: string
+      reviewID:
+        type: string
+    type: object
+  rest.errorRespose:
+    properties:
+      errorMessage:
+        type: string
+    type: object
+host: localhost:5174
+info:
+  contact:
+    email: ganeshdip.dumbare@gmail.com
+    name: Ganeshdip Dumbare
+  description: This is a simple REST API server for Reviewbot.
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  title: Reviewbot API
+  version: "1.0"
+paths:
+  /converse:
+    post:
+      consumes:
+      - application/json
+      description: add message to conversation and get response from the bot
+      parameters:
+      - description: continue conversation with the bot
+        in: body
+        name: converseRequest
+        required: true
+        schema:
+          $ref: '#/definitions/rest.converseRequest'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/rest.converseResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/rest.errorRespose'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/rest.errorRespose'
+      summary: add message to conversation and get response
+      tags:
+      - conversation
+  /endconverse:
+    post:
+      consumes:
+      - application/json
+      description: end conversation with the bot
+      parameters:
+      - description: end conversation with the bot
+        in: body
+        name: endConverseRequest
+        required: true
+        schema:
+          $ref: '#/definitions/rest.endConverseRequest'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/rest.converseResponse'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/rest.errorRespose'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/rest.errorRespose'
+      summary: end conversation
+      tags:
+      - conversation
+swagger: "2.0"
