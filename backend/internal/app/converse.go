@@ -61,7 +61,7 @@ func (a *conversationApp) Converse(req *ConverseRequest) (*ConverseResponse, err
 		a.logger.Debug("starting review")
 		// get conversation and update text
 		conversationResponse.ConversationID = convo.ID
-		conversationResponse.Text = "Please provide your review for the product."
+		conversationResponse.Text = "Please provide your review for iPhone 13."
 		// create review
 		rev := &review.Review{
 			CreatedAt:      time.Now().Unix(),
