@@ -1,4 +1,6 @@
-# reviewbot
+# Reviewbot
+
+[![Go](https://github.com/ganeshdipdumbare/reviewbot/actions/workflows/go.yml/badge.svg)](https://github.com/ganeshdipdumbare/reviewbot/actions/workflows/go.yml)
 
 ## Start backend server
 
