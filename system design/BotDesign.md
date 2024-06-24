@@ -134,3 +134,11 @@ Please always declare the interface and implement it using adapter patter.
 - Latency: Average time taken for system responses.
 - Throughput: Number of requests handled per second.
 - Error Rates: Frequency of errors encountered.
+
+## Scalability & Reliability Considerations
+
+- Horizontal Scaling: Use container orchestration (e.g., Kubernetes) to scale microservices horizontally.
+- Load Balancing: Implement load balancers (e.g., HAProxy, NGINX) to distribute incoming traffic evenly across instances.
+- Auto-scaling: Set up auto-scaling policies to handle traffic spikes based on CPU/memory usage and traffic patterns.
+- Fault Tolerance: Design services to be stateless where possible and use distributed databases to ensure redundancy.
+- Backup & Disaster Recovery: Regularly back up data and have a disaster recovery plan in place to handle system failures.
