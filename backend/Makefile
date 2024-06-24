@@ -7,4 +7,4 @@ test:
 generate:
 	go generate ./...
 generate-docs:
-	swag init -g cmd/main.go
+	swag init 
