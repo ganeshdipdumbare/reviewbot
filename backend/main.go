@@ -78,7 +78,7 @@ func main() {
 	}
 
 	// create a new rest api instance
-	api, err := rest.NewApi(converseApp, "5174")
+	api, err := rest.NewApi(converseApp, config.Get().Port)
 	if err != nil {
 		logger.Error("failed to create new rest api", slog.Any("error", err))
 		os.Exit(1)

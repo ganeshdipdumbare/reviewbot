@@ -55,7 +55,7 @@ func (api *apiDetails) endconverse(c *gin.Context) {
 		return
 	}
 
-	c.IndentedJSON(http.StatusCreated, &endConverseResponse{
+	c.IndentedJSON(http.StatusOK, &endConverseResponse{
 		ConversationID: req.ConversationID,
 		ReviewID:       req.ReviewID,
 	})

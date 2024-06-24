@@ -37,7 +37,7 @@ type EndConversationRequest struct {
 
 // ConversationApp is the interface for the conversation app
 //
-//go:generate mockgen -destination ../mocks/app/mock_conversation_app.go -package=mocks backend/internal/app ConversationApp
+//go:generate mockgen -destination ../mocks/app/mock_conversation_app.go -package=app backend/internal/app ConversationApp
 type ConversationApp interface {
 	Converse(req *ConverseRequest) (*ConverseResponse, error)
 	EndConversation(req *EndConversationRequest) error

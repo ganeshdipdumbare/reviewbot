@@ -64,7 +64,7 @@ func (api *apiDetails) converse(c *gin.Context) {
 		return
 	}
 
-	c.IndentedJSON(http.StatusCreated, &converseResponse{
+	c.IndentedJSON(http.StatusOK, &converseResponse{
 		ConversationID: resp.ConversationID,
 		ReviewID:       resp.ReviewID,
 		UserID:         resp.UserID,
