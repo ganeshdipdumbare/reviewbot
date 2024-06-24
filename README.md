@@ -1,6 +1,10 @@
-# ReviewBot
-
 [![Go](https://github.com/ganeshdipdumbare/reviewbot/actions/workflows/go.yml/badge.svg)](https://github.com/ganeshdipdumbare/reviewbot/actions/workflows/go.yml)
+
+<p align="center">
+<img src="https://github.com/ganeshdipdumbare/reviewbot/blob/main/static/images/bot.png" width="25%" height="25%">
+</p>
+
+# ReviewBot
 
 ## Start backend server
 
