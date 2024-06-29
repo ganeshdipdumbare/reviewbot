@@ -1,13 +1,14 @@
 package app
 
 import (
-	"backend/internal/conversation"
-	"backend/internal/infra/msgnlp"
-	"backend/internal/review"
 	"fmt"
 	"log/slog"
 	"strconv"
 	"time"
+
+	"backend/internal/conversation"
+	"backend/internal/infra/msgnlp"
+	"backend/internal/review"
 )
 
 func (a *conversationApp) Converse(req *ConverseRequest) (*ConverseResponse, error) {

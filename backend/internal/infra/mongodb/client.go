@@ -14,9 +14,7 @@ const (
 	mongoConnectTimeout = 10 * time.Second
 )
 
-var (
-	ErrEmptyArg = errors.New("empty argument")
-)
+var ErrEmptyArg = errors.New("empty argument")
 
 type Client struct {
 	mdbclient *mongo.Client
@@ -25,7 +23,6 @@ type Client struct {
 
 // NewClient created new mongo db instance, returns error if input is invalid
 func NewClient(uri string, dbName string) (*Client, error) {
-
 	if uri == "" {
 		return nil, fmt.Errorf("%w: uri", ErrEmptyArg)
 	}

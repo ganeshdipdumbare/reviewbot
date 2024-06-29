@@ -1,8 +1,9 @@
 package simplenlp
 
 import (
-	"backend/internal/infra/msgnlp"
 	"strings"
+
+	"backend/internal/infra/msgnlp"
 )
 
 type simpleNLP struct{}

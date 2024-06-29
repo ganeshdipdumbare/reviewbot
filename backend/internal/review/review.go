@@ -12,9 +12,7 @@ const (
 	StatusClosed  Status = "closed"
 )
 
-var (
-	ErrInvalidField = errors.New("invalid field")
-)
+var ErrInvalidField = errors.New("invalid field")
 
 // Review represents a review of a product
 type Review struct {

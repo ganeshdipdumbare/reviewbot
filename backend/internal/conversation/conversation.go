@@ -6,9 +6,7 @@ import (
 	"time"
 )
 
-var (
-	ErrInvalidField = errors.New("invalid field")
-)
+var ErrInvalidField = errors.New("invalid field")
 
 type Conversation struct {
 	ID        string

@@ -32,5 +32,6 @@ func (api *apiDetails) setupRouter() *gin.Engine {
 	apiV1.GET("/swagger/*any", ginSwagger.WrapHandler(swagFiles.Handler))
 	apiV1.POST("/converse", api.converse)
 	apiV1.POST("/endconverse", api.endconverse)
+	apiV1.GET("/health", api.health)
 	return r
 }

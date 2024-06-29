@@ -1,10 +1,11 @@
 package mongodb
 
 import (
-	"backend/internal/conversation"
 	"context"
 	"fmt"
 	"time"
+
+	"backend/internal/conversation"
 
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"

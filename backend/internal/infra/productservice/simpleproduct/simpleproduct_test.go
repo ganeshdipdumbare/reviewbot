@@ -9,7 +9,7 @@ import (
 	"backend/internal/infra/productservice/simpleproduct"
 )
 
-func TestSimpleProductService_GetProduct(t *testing.T) {
+func TestGetProduct(t *testing.T) {
 	service := simpleproduct.NewSimpleProductService()
 
 	// Test case 1: Valid product ID

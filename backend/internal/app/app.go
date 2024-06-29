@@ -1,18 +1,17 @@
 package app
 
 import (
+	"errors"
+	"fmt"
+	"log/slog"
+
 	"backend/internal/conversation"
 	"backend/internal/infra/msgnlp"
 	"backend/internal/infra/productservice"
 	"backend/internal/review"
-	"errors"
-	"fmt"
-	"log/slog"
 )
 
-var (
-	ErrEmptyArg = errors.New("empty argument")
-)
+var ErrEmptyArg = errors.New("empty argument")
 
 type ConverseRequest struct {
 	ConversationID string

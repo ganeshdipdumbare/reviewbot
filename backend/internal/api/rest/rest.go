@@ -1,7 +1,6 @@
 package rest
 
 import (
-	"backend/internal/app"
 	"context"
 	"fmt"
 	"log"
@@ -10,6 +9,8 @@ import (
 	"os/signal"
 	"syscall"
 	"time"
+
+	"backend/internal/app"
 )
 
 const (
@@ -70,7 +71,6 @@ func (a *apiDetails) StartServer() {
 
 // GracefulStopServer gracefully stops the rest server
 func (a *apiDetails) GracefulStopServer() {
-
 	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
 	defer cancel()
 	if err := a.server.Shutdown(ctx); err != nil {

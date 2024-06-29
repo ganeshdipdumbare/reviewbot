@@ -1,8 +1,9 @@
 package app
 
 import (
-	"backend/internal/review"
 	"log/slog"
+
+	"backend/internal/review"
 )
 
 func (a *conversationApp) EndConversation(req *EndConversationRequest) error {

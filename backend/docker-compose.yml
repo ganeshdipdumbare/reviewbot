@@ -8,7 +8,8 @@ services:
     healthcheck:
       test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/test --quiet
   reviewapp:
-    build: .
+    image: cosmtrek/air
+    working_dir: /project-package
     ports:
       - '5174:5174'
     environment:
@@ -20,3 +21,5 @@ services:
         condition: service_healthy
     links:
       - 'database'
+    volumes:
+      - ./:/project-package/
