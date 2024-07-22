@@ -17,3 +17,4 @@ vite.config.ts.timestamp-*
 # vscode
 .vscode
 backend/.vscode
+backend/backend
