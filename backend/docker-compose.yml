@@ -10,6 +10,7 @@ services:
   reviewapp:
     image: cosmtrek/air
     working_dir: /project-package
+    command: ['rest']
     ports:
       - '5174:5174'
     environment:
